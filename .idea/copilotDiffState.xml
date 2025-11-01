@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/modelo/Producto.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/modelo/Producto.kt" />
+              <option name="originalContent" value="package modelo&#10;&#10;&#10;&#10;&#10;data class Producto(&#10;    val id: Int,&#10;    var nombre: String,&#10;    var descripcion: String,&#10;    var precio: Double,&#10;    var stock: Int,&#10;    var categoria: String&#10;&#10;)&#10;{&#10;    override fun toString(): String {&#10;        return &quot;Producto(id=$id, nombre='$nombre', descripcion='$descripcion', precio=$precio, stock=$stock, categoria='$categoria')&quot;&#10;    }&#10;&#10;&#10;}&#10;" />
+              <option name="updatedContent" value="package modelo&#10;&#10;&#10;&#10;&#10;data class Producto(&#10;    val id: Int,&#10;    var nombre: String,&#10;    var descripcion: String,&#10;    var precio: Double,&#10;    var stock: Int,&#10;    var categoria: String&#10;&#10;)&#10;{&#10;    override fun toString(): String {&#10;        return &quot;Producto(id=$id, nombre='$nombre', descripcion='$descripcion', precio=$precio, stock=$stock, categoria='$categoria')&quot;&#10;    }&#10;&#10;&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
