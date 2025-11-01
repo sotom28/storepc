@@ -7,10 +7,18 @@ import kotlin.random.Random
 
 
 
+
+
 /// Clase Inventario para gestionar productos en el inventario
 class Inventario {
 
     private val productos: MutableList<Producto> = mutableListOf()
+
+    companion object {
+        const val DEFAULT_UMBRAL_BAJO_STOCK = 5
+        const val STOCK_CRITICO = 0
+    }
+
 
     // Agregar un producto al inventario
     fun agregarProducto(producto: Producto) {
@@ -69,14 +77,14 @@ class Inventario {
 
 
     //reporte bajo de stock de productos
-    fun productosBajoStock(umbral: Int=2): List<Producto> {
-        return productos.filter { it.stock < umbral }
-    }
+    fun productosBajoStock(umbral: Int = DEFAULT_UMBRAL_BAJO_STOCK): List<Producto> =
+        productos.filter { it.stock < umbral }
 
 
     // Ejemplo de uso de map para presentar reportes simples
-    fun reporteBajoStockTexto(umbral: Int = 5): List<String> =
-        productosBajoStock(umbral).map { "${it.nombre} (ID:${it.id}) - Stock:${it.stock}" }
+    fun productosConStockExacto(cantidad: Int = STOCK_CRITICO): List<Producto> =
+        productos.filter { it.stock == cantidad }
+
 
     // Datos iniciales opcionales // para pruebas
     fun seedDatos() {
